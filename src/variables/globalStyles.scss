@@ -1,3 +1,9 @@
 .border-rounded {
+  border: 0;
   border-radius: 20px;
+  overflow: hidden;
+}
+
+.section {
+  width: 100%;
 }
