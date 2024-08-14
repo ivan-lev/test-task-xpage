@@ -1,0 +1,10 @@
+@import url('./variables/colors.scss');
+@import url('./variables/fonts.scss');
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--Desktop-grey-100, #ececec);
+  box-sizing: border-box;
+}
