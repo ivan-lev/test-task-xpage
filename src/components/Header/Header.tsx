@@ -4,7 +4,7 @@ import Logo from '../Logo/Logo';
 
 export default function Header() {
   return (
-    <header className="header">
+    <header className="border-rounded header">
       <Logo />
       <nav className="header__nav-links">
         <ul className="header__nav-links-list">

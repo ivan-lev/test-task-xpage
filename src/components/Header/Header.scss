@@ -8,10 +8,8 @@
   grid-template-areas: 'logo navlinks menu user';
   gap: 22px;
   align-items: center;
-  border-radius: 20px;
   background: var(--Desktop-white, #ffffff);
   font-size: 14px;
-  text-transform: uppercase;
 
   @media screen and (max-width: 1280px) {
     grid-template-columns: 100px 1fr 24px 38px;
