@@ -1,0 +1,127 @@
+.header {
+  flex: 0 0 auto;
+  width: 100%;
+  padding: 14px 20px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 100px 1fr 90px 205px;
+  grid-template-areas: 'logo navlinks menu user';
+  gap: 22px;
+  align-items: center;
+  border-radius: 20px;
+  background: var(--Desktop-white, #ffffff);
+  font-size: 14px;
+  text-transform: uppercase;
+
+  @media screen and (max-width: 1280px) {
+    grid-template-columns: 100px 1fr 24px 38px;
+    font-size: 11px;
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr 0;
+    grid-template-areas: 'menu logo user';
+    gap: 0;
+  }
+
+  &__nav-links {
+    margin-left: 42px;
+    grid-area: navlinks;
+
+    @media screen and (max-width: 1280px) {
+      margin-left: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__nav-links-list {
+    list-style-type: none;
+    display: flex;
+    gap: 24px;
+  }
+
+  &__nav-link {
+    color: var(--Desktop-black, #202020);
+    line-height: 140%;
+    text-decoration: none;
+  }
+
+  &__menu {
+    grid-area: menu;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    gap: 8px;
+    border: 0;
+    font-family: 'Druk Wide Cyr', Arial, Helvetica, sans-serif;
+    background-color: var(--Desktop-white, #ffffff);
+    text-transform: uppercase;
+
+    @media screen and (max-width: 768px) {
+      width: 32px;
+    }
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background-image: url('/icons/burger.svg');
+      background-size: 24px 24px;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      @media screen and (max-width: 1280px) {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+
+  &__menu-text {
+    @media screen and (max-width: 1280px) {
+      display: none;
+    }
+  }
+
+  &__user-info {
+    height: 38px;
+    box-sizing: border-box;
+    grid-area: user;
+    display: flex;
+    padding: 3px 3px 3px 16px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 20px;
+    background: var(--Desktop-background, #efefef);
+
+    @media screen and (max-width: 1280px) {
+      display: flex;
+      padding: 3px;
+      width: 38px;
+      align-items: center;
+      justify-content: center;
+      justify-self: right;
+    }
+  }
+
+  &__user-name {
+    text-wrap: nowrap;
+
+    @media screen and (max-width: 1280px) {
+      display: none;
+    }
+  }
+
+  &__user-photo {
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    background: var(--Desktop-background, #efefef);
+  }
+}
