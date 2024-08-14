@@ -17,6 +17,13 @@
     background-size: cover;
   }
 
+  &__hero-title {
+    max-width: 1300px;
+    color: var(--Desktop-white, #fff);
+    font-size: 80px;
+    line-height: 120%;
+  }
+
   &__hero-buttons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
