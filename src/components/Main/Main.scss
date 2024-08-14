@@ -2,19 +2,27 @@
   flex: 1 0 auto;
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
 
   &__hero {
     height: 830px;
     padding: 20px;
+    margin-top: 8px;
     box-sizing: border-box;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 64px;
+    grid-template-rows: auto min-content;
+    gap: 48px;
     background-image: url('/public/images/hero-background.webp');
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media screen and (max-width: 320px) {
+      height: 516px;
+      gap: 12px;
+    }
   }
 
   &__hero_1 {
@@ -33,12 +41,6 @@
     place-self: end start;
     max-width: 1300px;
     color: var(--Desktop-white, #fff);
-    font-size: 80px;
-    line-height: 120%;
-
-    @media screen and (max-width: 320px) {
-      font-size: 26px;
-    }
   }
 
   &__hero-buttons {
@@ -48,57 +50,98 @@
 
     @media screen and (max-width: 320px) {
       grid-template-columns: 1fr;
+      gap: 4px;
     }
   }
 
-  &__hero-button {
-    pointer-events: auto;
-    cursor: pointer;
-    height: 64px;
-    box-sizing: border-box;
-    padding: 20px;
-    display: flex;
-    align-items: center;
+  &__play {
+    margin-top: 120px;
+  }
+
+  &__play-cards {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__play-card {
     background: var(--Desktop-white, #ffffff);
-    box-shadow: 0px 4px 20px 0px rgba(23, 23, 23, 0.03);
-    color: var(--Desktop-black, #202020);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content auto 0;
+    cursor: pointer;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      max-width: 500px;
+    }
+
+    @media screen and (max-width: 320px) {
+      gap: 28px;
+    }
+  }
+
+  &__play-card-img {
+    width: 100%;
+    aspect-ratio: 62 / 52;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0 0 50% 50%;
+  }
+
+  &__play-card-img_unbordered {
+    border-radius: 0;
+    object-fit: contain;
+    object-position: right;
+  }
+
+  &__play-card-text {
+    margin-top: 62px;
+    padding: 0 24px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__play-card-description {
+    max-width: 440px;
+    font-family: Inter, Arial, Helvetica, sans-serif;
     font-size: 16px;
-    line-height: 140%;
-    text-decoration: none;
+    font-weight: 500;
+    text-transform: none;
+    line-height: 160%;
+
+    @media screen and (max-width: 1280px) {
+      font-size: 15px;
+      line-height: 150%;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+      line-height: 140%;
+    }
   }
 
-  &__hero-button:hover,
-  &__hero-button_active {
+  &__play-card-button {
+    margin: 0 24px 24px;
+  }
+
+  &__play-card:hover {
+    grid-template-rows: min-content auto 88px;
     color: var(--Desktop-white, #ffffff);
-    background: var(--Desktop-primary-orange, #f36722);
+    background: var(--Desktop-black, #202020);
   }
 
-  &__hero-button:hover::after {
-    content: '';
-    display: inline-block;
-    margin-left: auto;
-    width: 24px;
-    height: 24px;
-    background-image: url('/public/icons/arrow-right-white.svg');
-    background-position: center;
-    background-size: 100%;
-    background-repeat: no-repeat;
+  &__play-card:hover &__play-card-img {
+    margin-top: -64px;
   }
 
-  .parent {
-  } /* nothing here:) */
-
-  .child {
-    pointer-events: auto;
-  }
-
-  /*this is the new approach*/
-  .parent:has(.child:nth-of-type(1):hover) {
-    /*you may replace this with an explicit className, e.g. :has(.child1)*/
-    background: yellow;
-  }
-
-  .parent:has(.child:nth-of-type(2):hover) {
-    background: red;
+  &__play-card:hover &__play-card-text {
+    margin-top: 40px;
   }
 }
