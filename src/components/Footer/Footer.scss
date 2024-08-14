@@ -1,3 +1,137 @@
 .footer {
   flex: 0 0 auto;
+  width: 100%;
+  min-height: 655px;
+  display: grid;
+  gap: 30px 120px;
+  grid-template-rows: min-content 30px auto;
+  grid-template-areas:
+    'title qr'
+    'app-links qr'
+    'copyright qr';
+  border-top: 1px solid var(--Desktop-black, #202020);
+  padding-top: 36px;
+
+  @media screen and (max-width: 1280px) {
+    gap: 30px;
+  }
+  @media screen and (max-width: 768px) {
+    grid-template-areas:
+      'title'
+      'app-links'
+      'copyright';
+  }
+
+  @media screen and (max-width: 320px) {
+    min-height: 460px;
+    gap: 20px;
+    grid-template-rows: min-content min-content auto;
+  }
+
+  &__title {
+    grid-area: title;
+    max-width: 1140px;
+    height: fit-content;
+    font-size: 48px;
+    line-height: 120%;
+    text-transform: uppercase;
+
+    @media screen and (max-width: 1280px) {
+      font-size: 35px;
+    }
+
+    @media screen and (max-width: 1080px) {
+      font-size: 30px;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 25px;
+    }
+
+    @media screen and (max-width: 320px) {
+      font-size: 20px;
+      line-height: 130%;
+    }
+  }
+
+  &__app-links {
+    grid-area: app-links;
+    display: flex;
+    gap: 37px;
+
+    @media screen and (max-width: 320px) {
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+
+  &__app-link {
+    height: 30px;
+
+    @media screen and (max-width: 320px) {
+      height: 32px;
+    }
+  }
+
+  &__app-link-img {
+    height: 100%;
+  }
+
+  &__qr {
+    grid-area: qr;
+    width: 352px;
+    height: fit-content;
+    box-sizing: border-box;
+    padding: 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+    border-radius: 30px;
+    background: var(--Desktop-white, #fff);
+
+    @media screen and (max-width: 1280px) {
+      width: 300px;
+      padding: 30px;
+    }
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__qr-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  &__qr-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+  }
+
+  &__qr-text-element {
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  &__qr-text-element:first-child {
+    color: var(--Desktop-grey-400, #747474);
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 160%;
+    line-height: 1;
+  }
+
+  &__copyright {
+    grid-area: copyright;
+    font-size: 12px;
+    align-self: end;
+  }
 }
