@@ -14,9 +14,30 @@
   font-weight: bold;
   font-style: normal;
   font-synthesis: none;
+  text-transform: uppercase;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url('/images/basketball-ball.png');
+  background-size: 1000px 1000px;
+  background-repeat: no-repeat;
+  background-position: bottom -500px right -400px;
+
+  @media screen and (max-width: 1280px) {
+    background-size: 800px 800px;
+    background-position: bottom -400px right -350px;
+  }
+
+  @media screen and (max-width: 768px) {
+    background-size: 500px 500px;
+    background-position: bottom -50px right -250px;
+  }
+
+  @media screen and (max-width: 320px) {
+    background-size: 216px 214px;
+    padding: 12px 12px 25px;
+    background-position: bottom 59px right -60px;
+  }
 }
 
 * {
