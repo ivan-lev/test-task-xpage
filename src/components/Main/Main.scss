@@ -5,47 +5,70 @@
   align-items: center;
 
   &__hero {
-    min-height: 830px;
+    height: 830px;
     padding: 20px;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 64px;
     background-image: url('/public/images/hero-background.webp');
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
   }
 
+  &__hero_1 {
+    background-image: url('/public/images/hero-background-1.webp');
+  }
+
+  &__hero_2 {
+    background-image: url('/public/images/hero-background-2.webp');
+  }
+
+  &__hero_3 {
+    background-image: url('/public/images/hero-background-3.webp');
+  }
+
   &__hero-title {
+    place-self: end start;
     max-width: 1300px;
     color: var(--Desktop-white, #fff);
     font-size: 80px;
     line-height: 120%;
+
+    @media screen and (max-width: 320px) {
+      font-size: 26px;
+    }
   }
 
   &__hero-buttons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
+
+    @media screen and (max-width: 320px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__hero-button {
     pointer-events: auto;
     cursor: pointer;
     height: 64px;
+    box-sizing: border-box;
     padding: 20px;
     display: flex;
     align-items: center;
     background: var(--Desktop-white, #ffffff);
     box-shadow: 0px 4px 20px 0px rgba(23, 23, 23, 0.03);
-    font-family: 'Druk Wide Cyr';
+    color: var(--Desktop-black, #202020);
     font-size: 16px;
     line-height: 140%;
-    text-transform: uppercase;
+    text-decoration: none;
   }
 
-  &__hero-button:hover {
+  &__hero-button:hover,
+  &__hero-button_active {
     color: var(--Desktop-white, #ffffff);
     background: var(--Desktop-primary-orange, #f36722);
   }
@@ -60,18 +83,6 @@
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
-  }
-
-  &__hero:has(&__hero-button:nth-of-type(1):hover) {
-    background-image: url('/public/images/hero-background-1.webp');
-  }
-
-  &__hero:has(&__hero-button:nth-of-type(2):hover) {
-    background-image: url('/public/images/hero-background-2.webp');
-  }
-
-  &__hero:has(&__hero-button:nth-of-type(3):hover) {
-    background-image: url('/public/images/hero-background-3.webp');
   }
 
   .parent {

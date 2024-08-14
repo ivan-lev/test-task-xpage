@@ -3,44 +3,48 @@ import './Main.scss';
 import { useState } from 'react';
 
 export default function Main() {
-  const alternativeTitles = [
+  const titles = [
     'Найди с кем поиграть в баскет',
     'Играй в баскет',
     'Учись играть в баскет',
     'Смотри, как играют в баскет'
   ];
-  const [heroTitle, setHeroTitle] = useState(alternativeTitles[0]);
 
-  const changeTitle = (titleNumber: number) => {
-    setHeroTitle(alternativeTitles[titleNumber]);
-  };
+  const [activeNumber, setActiveNumber] = useState(0);
 
   return (
     <main className="content">
-      <section className="border-rounded section content__hero">
-        <h2 className="content__hero-title">{heroTitle}</h2>
+      <section className={`border-rounded section content__hero content__hero_${activeNumber}`}>
+        <h2 className="content__hero-title">{titles[activeNumber]}</h2>
+
         <div className="content__hero-buttons">
-          <button
-            className="border-rounded content__hero-button"
-            onMouseEnter={() => changeTitle(1)}
-            onMouseLeave={() => changeTitle(0)}
+          <a
+            href="#"
+            className={`border-rounded content__hero-button ${
+              activeNumber === 1 ? 'content__hero-button_active' : ''
+            }`}
+            onMouseEnter={() => setActiveNumber(1)}
           >
             Играй
-          </button>
-          <button
-            className="border-rounded content__hero-button"
-            onMouseEnter={() => changeTitle(2)}
-            onMouseLeave={() => changeTitle(0)}
+          </a>
+          <a
+            href="#"
+            className={`border-rounded content__hero-button ${
+              activeNumber === 2 ? 'content__hero-button_active' : ''
+            }`}
+            onMouseEnter={() => setActiveNumber(2)}
           >
             Учись
-          </button>
-          <button
-            className="border-rounded content__hero-button"
-            onMouseEnter={() => changeTitle(3)}
-            onMouseLeave={() => changeTitle(0)}
+          </a>
+          <a
+            href="#"
+            className={`border-rounded content__hero-button ${
+              activeNumber === 3 ? 'content__hero-button_active' : ''
+            }`}
+            onMouseEnter={() => setActiveNumber(3)}
           >
             Смотри
-          </button>
+          </a>
         </div>
       </section>
       <section className="content__play"></section>
