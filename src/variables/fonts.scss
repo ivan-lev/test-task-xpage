@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Commissioner';
+  src: local('Commissioner Regular'), local('Commissioner-Regular'),
+    url('../vendor/fonts/Commissioner-Regular.woff2') format('woff2'),
+    url('../vendor/fonts/Commissioner-Regular.woff') format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Commissioner';
+  src: local('Commissioner Bold'), local('Commissioner-Bold'),
+    url('../vendor/fonts/Commissioner-Bold.woff2') format('woff2'),
+    url('../vendor/fonts/Commissioner-Bold.woff') format('woff');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Druk Wide Cyr';
+  src: local('Commissioner Bold'), local('Commissioner-Bold'),
+    url('../vendor/fonts/DrukWideCyr-Bold.woff2') format('woff2'),
+    url('../vendor/fonts/DrukWideCyr-Bold.woff') format('woff');
+  font-weight: bold;
+}
