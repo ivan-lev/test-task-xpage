@@ -1,5 +1,86 @@
 .content {
   flex: 1 0 auto;
+  width: 100%;
   display: flex;
   align-items: center;
+
+  &__hero {
+    min-height: 830px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background-image: url('/public/images/hero-background.webp');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__hero-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  &__hero-button {
+    pointer-events: auto;
+    cursor: pointer;
+    height: 64px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    background: var(--Desktop-white, #ffffff);
+    box-shadow: 0px 4px 20px 0px rgba(23, 23, 23, 0.03);
+    font-family: 'Druk Wide Cyr';
+    font-size: 16px;
+    line-height: 140%;
+    text-transform: uppercase;
+  }
+
+  &__hero-button:hover {
+    color: var(--Desktop-white, #ffffff);
+    background: var(--Desktop-primary-orange, #f36722);
+  }
+
+  &__hero-button:hover::after {
+    content: '';
+    display: inline-block;
+    margin-left: auto;
+    width: 24px;
+    height: 24px;
+    background-image: url('/public/icons/arrow-right-white.svg');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  &__hero:has(&__hero-button:nth-of-type(1):hover) {
+    background-image: url('/public/images/hero-background-1.webp');
+  }
+
+  &__hero:has(&__hero-button:nth-of-type(2):hover) {
+    background-image: url('/public/images/hero-background-2.webp');
+  }
+
+  &__hero:has(&__hero-button:nth-of-type(3):hover) {
+    background-image: url('/public/images/hero-background-3.webp');
+  }
+
+  .parent {
+  } /* nothing here:) */
+
+  .child {
+    pointer-events: auto;
+  }
+
+  /*this is the new approach*/
+  .parent:has(.child:nth-of-type(1):hover) {
+    /*you may replace this with an explicit className, e.g. :has(.child1)*/
+    background: yellow;
+  }
+
+  .parent:has(.child:nth-of-type(2):hover) {
+    background: red;
+  }
 }
