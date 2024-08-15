@@ -11,13 +11,3 @@ export const secondaryArticleTags: Tag[] = [
   { title: 'выезд тренера на дом', type: 'usual' },
   { title: '12 фильтров', type: 'highlighted' }
 ];
-
-export const videoAtricleTags: Tag[] = [{ title: '26 октября', type: 'gray' }];
-
-export const miscAtricleTags: Tag[] = [{ title: '26 октября', type: 'gray' }];
-
-export const termsAtricleTags: Tag[] = [
-  { title: 'треха', type: 'gray' },
-  { title: 'трехочковый бросок', type: 'gray' },
-  { title: '36 фильтров', type: 'black' }
-];
