@@ -101,6 +101,14 @@
   background-image: url('../../public/icons/arrow-right-green.svg');
 }
 
+.link_hover-green:hover {
+  color: var(--Desktop-primary-green, #2e8d43);
+}
+
+.link_hover-green:hover::after {
+  background-image: url('../../public/icons/arrow-right-green.svg');
+}
+
 .button {
   pointer-events: auto;
   cursor: pointer;
@@ -144,4 +152,10 @@
     width: 16px;
     height: 16px;
   }
+}
+
+.separator {
+  width: 100%;
+  height: 100%;
+  background: var(--Desktop-grey-200, #c4c4c4);
 }
