@@ -12,6 +12,13 @@
   text-wrap: nowrap;
   cursor: pointer;
 
+  @media screen and (max-width: 320px) {
+    padding: 6px 12px;
+    border-radius: 19.6px;
+    font-size: 10px;
+    line-height: 140%;
+  }
+
   &_usual {
     background: var(--desktop-white-20, rgba(255, 255, 255, 0.2));
     color: var(--Desktop-white, #ffffff);

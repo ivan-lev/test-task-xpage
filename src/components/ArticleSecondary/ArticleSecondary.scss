@@ -5,6 +5,10 @@
   padding: 20px 0;
   border-bottom: 1px solid var(--Desktop-grey-200, #c4c4c4);
 
+  @media screen and (max-width: 320px) {
+    display: none;
+  }
+
   &:first-child {
     padding-top: 0;
   }

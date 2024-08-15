@@ -2,7 +2,7 @@ import './Footer.scss';
 
 export default function Footer() {
   return (
-    <footer className="footer">
+    <footer className="section footer">
       <h3 className="footer__title">
         Еще больше полезных материалов и видеоуроков в нашем приложении
       </h3>
