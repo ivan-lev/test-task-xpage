@@ -1,0 +1,80 @@
+.learn {
+  & {
+    padding: 32px;
+    box-sizing: border-box;
+    margin-top: 120px;
+    background-color: var(--Desktop-white, #ffffff);
+  }
+
+  &__articles {
+    display: grid;
+    grid-template-columns: 2fr 1px 1fr;
+    gap: 16px;
+  }
+
+  &__articles-block_primary {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 611px 294px;
+    gap: 20px;
+  }
+
+  &__articles-block_secondary {
+    display: grid;
+    grid-template-rows: 302px 1fr 302px;
+  }
+
+  &__article-primary {
+    background: var(--Desktop-primary-green, #2e8d43);
+    box-sizing: border-box;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__article-primary_first {
+    background-image: url('/public/images/hero-background-1.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__article-title_primary {
+    max-width: 800px;
+    color: var(--Desktop-white, #fff);
+    font-size: 48px;
+    line-height: 120%;
+  }
+
+  &__article-secondary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--Desktop-grey-200, #c4c4c4);
+  }
+
+  &__article-secondary:first-child {
+    padding-top: 0;
+  }
+
+  &__article-secondary:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  &__article-link {
+    text-decoration: none;
+    color: var(--Desktop-black, #202020);
+    font-size: 20px;
+    transition: all 0s;
+  }
+
+  &__article-secondary-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
