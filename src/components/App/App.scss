@@ -24,18 +24,19 @@
   background-position: bottom -500px right -400px;
 
   @media screen and (max-width: 1280px) {
+    padding: 18px 18px 35px;
     background-size: 800px 800px;
     background-position: bottom -400px right -350px;
   }
 
   @media screen and (max-width: 768px) {
+    padding: 12px 12px 25px;
     background-size: 500px 500px;
     background-position: bottom -50px right -250px;
   }
 
   @media screen and (max-width: 320px) {
     background-size: 216px 214px;
-    padding: 12px 12px 25px;
     background-position: bottom 59px right -60px;
   }
 }

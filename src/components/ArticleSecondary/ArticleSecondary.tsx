@@ -13,7 +13,10 @@ export default function ArticleSecondary({ article }: { article: ArticleType }):
 
       {article.articleThumbnail ? (
         <div className="article-secondary__content_with-thumbnail">
-          <img src={article.articleThumbnail}></img>
+          <img
+            className="article-secondary__content_with-thumbnail-img"
+            src={article.articleThumbnail}
+          ></img>
           <div className="article-secondary__content_with-thumbnail-wrapper">
             <a className="article-secondary__link" href="#">
               {article.articleTitle}
