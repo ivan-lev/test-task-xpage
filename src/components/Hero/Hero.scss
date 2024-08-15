@@ -1,0 +1,48 @@
+.hero {
+  height: 830px;
+  padding: 20px;
+  margin-top: 8px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto min-content;
+  gap: 48px;
+  background-image: url('/public/images/hero-background.webp');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media screen and (max-width: 768px) {
+    height: 516px;
+    gap: 12px;
+  }
+
+  &_1 {
+    background-image: url('/public/images/hero-background-1.webp');
+  }
+
+  &_2 {
+    background-image: url('/public/images/hero-background-2.webp');
+  }
+
+  &_3 {
+    background-image: url('/public/images/hero-background-3.webp');
+  }
+
+  &__title {
+    place-self: end start;
+    max-width: 1300px;
+    color: var(--Desktop-white, #fff);
+  }
+
+  &__buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+  }
+}

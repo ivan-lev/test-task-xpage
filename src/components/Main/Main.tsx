@@ -1,48 +1,12 @@
 import './Main.scss';
 
-import { useState } from 'react';
-
+import Hero from '../Hero/Hero';
 import LearnSection from '../LearnSection/LearnSection';
 
 export default function Main() {
-  const titles = [
-    'Найди с кем поиграть в баскет',
-    'Играй в баскет',
-    'Учись играть в баскет',
-    'Смотри, как играют в баскет'
-  ];
-
-  const [activeNumber, setActiveNumber] = useState(0);
-
   return (
     <main className="content">
-      <section className={`content__hero content__hero_${activeNumber} border-rounded section`}>
-        <h2 className="title content__hero-title">{titles[activeNumber]}</h2>
-
-        <div className="content__hero-buttons">
-          <a
-            href="#"
-            className={`border-rounded button ${activeNumber === 1 ? 'button_active' : ''}`}
-            onMouseEnter={() => setActiveNumber(1)}
-          >
-            Играй
-          </a>
-          <a
-            href="#"
-            className={`border-rounded button ${activeNumber === 2 ? 'button_active' : ''}`}
-            onMouseEnter={() => setActiveNumber(2)}
-          >
-            Учись
-          </a>
-          <a
-            href="#"
-            className={`border-rounded button ${activeNumber === 3 ? 'button_active' : ''}`}
-            onMouseEnter={() => setActiveNumber(3)}
-          >
-            Смотри
-          </a>
-        </div>
-      </section>
+      <Hero />
 
       <section className="section section_titled content__play">
         <div className="section-heading">
