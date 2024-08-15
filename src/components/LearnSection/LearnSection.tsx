@@ -1,8 +1,10 @@
 import './LearnSection.scss';
 
 import Tags from '../Tags/Tags';
+import ArticleSecondary from '../ArticleSecondary/ArticleSecondary';
 
 import * as tags from '../../variables/articleTags';
+import { secondaryArticlesData } from '../../variables/articlesData';
 
 export default function LearnSection(): JSX.Element {
   return (
@@ -35,41 +37,9 @@ export default function LearnSection(): JSX.Element {
         <div className="separator learn__articles-separator"></div>
 
         <div className="learn__articles-block_secondary">
-          <div className="learn__article-secondary">
-            <a className="learn__article-link link link_hover-green" href="#">
-              <h4>Видеуроки</h4>
-            </a>
-            <div className="learn__article-secondary-content">
-              <p>Евгений Воронов: «Бронзовые медали - оценка труда нашей команды»</p>
-              <div>
-                <Tags tags={tags.videoAtricleTags} />
-              </div>
-            </div>
-          </div>
-
-          <div className="learn__article-secondary">
-            <a className="learn__article-link link link_hover-green" href="#">
-              <h4>Статьи</h4>
-            </a>
-            <div className="learn__article-secondary-content">
-              <p>Евгений Воронов: «Бронзовые медали - оценка труда нашей команды»</p>
-              <div>
-                <Tags tags={tags.miscAtricleTags} />
-              </div>
-            </div>
-          </div>
-
-          <div className="learn__article-secondary">
-            <a className="learn__article-link link link_hover-green" href="#">
-              <h4>Термины</h4>
-            </a>
-            <div className="learn__article-secondary-content">
-              <p></p>
-              <div>
-                <Tags tags={tags.termsAtricleTags} />
-              </div>
-            </div>
-          </div>
+          {secondaryArticlesData.map((article, index) => (
+            <ArticleSecondary key={index} article={article} />
+          ))}
         </div>
       </div>
     </section>
