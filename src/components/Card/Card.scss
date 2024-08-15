@@ -1,0 +1,74 @@
+.card {
+  background: var(--Desktop-white, #ffffff);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content auto 0;
+  cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 320px) {
+    gap: 28px;
+  }
+
+  &__img {
+    width: 100%;
+    aspect-ratio: 62 / 52;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0 0 50% 50%;
+  }
+
+  &__img_unbordered {
+    border-radius: 0;
+    object-fit: contain;
+    object-position: right;
+  }
+
+  &__text {
+    margin-top: 62px;
+    padding: 0 24px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__description {
+    max-width: 440px;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: none;
+    line-height: 160%;
+
+    @media screen and (max-width: 1280px) {
+      font-size: 15px;
+      line-height: 150%;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+      line-height: 140%;
+    }
+  }
+
+  &__button {
+    margin: 0 24px 24px;
+  }
+
+  &:hover {
+    grid-template-rows: min-content auto 88px;
+    color: var(--Desktop-white, #ffffff);
+    background: var(--Desktop-black, #202020);
+  }
+
+  &:hover &__img {
+    margin-top: -64px;
+  }
+
+  &:hover &__text {
+    margin-top: 40px;
+  }
+}
