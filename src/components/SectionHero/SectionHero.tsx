@@ -1,10 +1,10 @@
-import './Hero.scss';
+import './SectionHero.scss';
 
 import { useState } from 'react';
 
 import { heroData } from '../../variables/heroData';
 
-export default function Hero(): JSX.Element {
+export default function SectionHero(): JSX.Element {
   const [activeNumber, setActiveNumber] = useState(0);
   return (
     <section

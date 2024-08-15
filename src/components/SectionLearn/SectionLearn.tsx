@@ -1,4 +1,4 @@
-import './LearnSection.scss';
+import './SectionLearn.scss';
 
 import Tags from '../Tags/Tags';
 import ArticleSecondary from '../ArticleSecondary/ArticleSecondary';
@@ -6,7 +6,7 @@ import ArticleSecondary from '../ArticleSecondary/ArticleSecondary';
 import * as tags from '../../variables/articleTags';
 import { secondaryArticlesData } from '../../variables/articlesData';
 
-export default function LearnSection(): JSX.Element {
+export default function SectionLearn(): JSX.Element {
   return (
     <section className="section section_titled border-rounded learn">
       <div className="section-heading">
