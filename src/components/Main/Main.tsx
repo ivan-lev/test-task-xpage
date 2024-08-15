@@ -2,6 +2,8 @@ import './Main.scss';
 
 import { useState } from 'react';
 
+import LearnSection from '../LearnSection/LearnSection';
+
 export default function Main() {
   const titles = [
     'Найди с кем поиграть в баскет',
@@ -44,8 +46,8 @@ export default function Main() {
 
       <section className="section section_titled content__play">
         <div className="section-heading">
-          <h2 className="title">играй</h2>
-          <a href="#" className="link link_orange content__play-link">
+          <h2 className="title">Играй</h2>
+          <a href="#" className="link link_orange">
             в раздел
           </a>
         </div>
@@ -106,7 +108,8 @@ export default function Main() {
           </div>
         </div>
       </section>
-      <section className="content__learn"></section>
+
+      <LearnSection />
     </main>
   );
 }
