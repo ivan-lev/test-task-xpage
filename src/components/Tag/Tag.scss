@@ -1,0 +1,33 @@
+.tag {
+  height: 33px;
+  width: fit-content;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  border-radius: 39px;
+  font-size: 12px;
+  text-wrap: nowrap;
+
+  &_usual {
+    background: var(--desktop-white-20, rgba(255, 255, 255, 0.2));
+    color: var(--Desktop-white, #ffffff);
+  }
+
+  &_highlighted {
+    background: var(--Desktop-white, #ffffff);
+    color: var(--Desktop-primary-green, #2e8d43);
+  }
+
+  &_gray {
+    background: var(--Desktop-background, #efefef);
+    color: var(--Desktop-black, #202020);
+  }
+
+  &_black {
+    background: var(--Desktop-black, #202020);
+    color: var(--Desktop-white, #ffffff);
+  }
+}
