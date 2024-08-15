@@ -9,7 +9,7 @@ export default function SectionPlay(): JSX.Element {
     <section className="section section_titled play">
       <div className="section-heading">
         <h2 className="title">Играй</h2>
-        <a href="#" className="link link_orange">
+        <a href="#" className="hover-600 link link_orange">
           в раздел
         </a>
       </div>

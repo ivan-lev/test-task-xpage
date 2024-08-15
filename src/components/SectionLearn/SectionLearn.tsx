@@ -11,7 +11,7 @@ export default function SectionLearn(): JSX.Element {
     <section className="section section_titled border-rounded learn">
       <div className="section-heading">
         <h2 className="title">Учись</h2>
-        <a href="#" className="link link_green">
+        <a href="#" className="hover-600 link link_green">
           в раздел
         </a>
       </div>

@@ -150,6 +150,12 @@
   background-image: url('../../public/icons/arrow-right-green.svg');
 }
 
+.hover-600 {
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
 .button {
   pointer-events: auto;
   cursor: pointer;
