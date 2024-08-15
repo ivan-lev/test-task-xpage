@@ -2,9 +2,9 @@ import './Tags.scss';
 
 import Tag from '../Tag/Tag';
 
-import type { TagType } from '../../types/tag';
+import type { TagsArray } from '../../types/tags';
 
-export default function Tags({ tags }: { tags: TagType[] }): JSX.Element {
+export default function Tags({ tags }: { tags: TagsArray }): JSX.Element {
   return (
     <div className="tags">
       {tags.map(tag => (

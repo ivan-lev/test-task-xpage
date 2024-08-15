@@ -1,4 +1,4 @@
-import type { Tag } from '../types/tag';
+import type { Tag } from '../types/tags';
 
 export const primaryArticleTags: Tag[] = [
   { title: '12 секций по всему городу', type: 'highlighted' }
