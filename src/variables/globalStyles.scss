@@ -131,7 +131,7 @@
 }
 
 .link_orange::after {
-  background-image: url('../../public/icons/arrow-right-orange.svg');
+  background-image: url('/icons/arrow-right-orange.svg');
 }
 
 .link_green {
@@ -139,7 +139,7 @@
 }
 
 .link_green::after {
-  background-image: url('../../public/icons/arrow-right-green.svg');
+  background-image: url('/icons/arrow-right-green.svg');
 }
 
 .link_hover-green:hover {
@@ -147,7 +147,7 @@
 }
 
 .link_hover-green:hover::after {
-  background-image: url('../../public/icons/arrow-right-green.svg');
+  background-image: url('/icons/arrow-right-green.svg');
 }
 
 .hover-600 {
@@ -200,7 +200,7 @@
   margin-left: auto;
   width: 24px;
   height: 24px;
-  background-image: url('/public/icons/arrow-right-white.svg');
+  background-image: url('/icons/arrow-right-white.svg');
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
