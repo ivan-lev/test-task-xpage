@@ -16,7 +16,7 @@ export default function SectionPlay(): JSX.Element {
 
       <div className="play__cards">
         {cardsArray.map(card => (
-          <Card card={card} />
+          <Card key={card.title} card={card} />
         ))}
       </div>
     </section>
