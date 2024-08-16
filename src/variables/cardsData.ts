@@ -5,21 +5,21 @@ export const cardsArray: CardsArray = [
     title: 'Найди себе команду',
     text: 'Игры на районе - это возможность найти с кем поиграть в баскетбол в выходные, или создать свою игру и пригласить других игроков присоединиться.',
     buttonText: 'Текст кнопки',
-    image: './images/card-image-1.jpg',
+    image: './images/card-image-1.webp',
     isImageRounded: true
   },
   {
     title: 'Создавай команды',
     text: 'Игры на районе - это возможность найти с кем поиграть в баскетбол в выходные, или создать свою игру и пригласить других игроков присоединиться.',
     buttonText: 'Текст кнопки',
-    image: './images/card-image-2.jpg',
+    image: './images/card-image-2.webp',
     isImageRounded: false
   },
   {
     title: 'Участвуй в турнирах',
     text: 'Участвуйте в турнирах вместе с вашей командой. Будьте активными, побеждайте и получайте ачивки и призы от наших спонсоров.',
     buttonText: 'Текст кнопки',
-    image: './images/card-image-3.jpg',
+    image: './images/card-image-3.webp',
     isImageRounded: true
   }
 ];
