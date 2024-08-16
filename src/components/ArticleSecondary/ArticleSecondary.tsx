@@ -16,6 +16,7 @@ export default function ArticleSecondary({ article }: { article: ArticleType }):
           <img
             className="article-secondary__content_with-thumbnail-img"
             src={article.articleThumbnail}
+            alt={`Картинка для новости ${article.articleTitle}`}
           ></img>
           <div className="article-secondary__content_with-thumbnail-wrapper">
             <a className="article-secondary__link" href="#">
