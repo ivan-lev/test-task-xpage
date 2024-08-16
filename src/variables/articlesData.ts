@@ -3,7 +3,7 @@ import type { ArticleType } from '../types/articleType';
 export const secondaryArticlesData: ArticleType[] = [
   {
     sectionTitle: 'Видеоуроки',
-    articleThumbnail: '/images/card-image-4.jpg',
+    articleThumbnail: './images/card-image-4.jpg',
     articleTitle: 'Евгений Воронов: «Бронзовые медали - оценка труда нашей команды»',
     tags: [{ title: '26 октября', type: 'gray' }]
   },

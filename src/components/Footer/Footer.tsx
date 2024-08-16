@@ -10,14 +10,14 @@ export default function Footer() {
         <a className="footer__app-link" href="#">
           <img
             className="footer__app-link-img"
-            src="/icons/download-appstore.svg"
+            src="./icons/download-appstore.svg"
             alt="Ссылка на приложение в iOS"
           ></img>
         </a>
         <a className="footer__app-link" href="#">
           <img
             className="footer__app-link-img"
-            src="/icons/download-google-play.svg"
+            src="./icons/download-google-play.svg"
             alt="Ссылка на приложение в Google Play"
           ></img>
         </a>
@@ -25,7 +25,7 @@ export default function Footer() {
       <div className="footer__qr">
         <img
           className="footer__qr-img"
-          src="/icons/qr.svg"
+          src="./icons/qr.svg"
           alt="Qr-код для скачивания приложения"
         />
         <div className="footer__qr-text">

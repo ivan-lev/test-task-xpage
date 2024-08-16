@@ -35,7 +35,7 @@ export default function Header() {
       </button>
       <div className="hover-600 header__user-info">
         <span className="header__user-name">геннадий П.</span>
-        <img className="header__user-photo" src="/images/user-photo.jpg" alt="Фото пользователя" />
+        <img className="header__user-photo" src="./images/user-photo.jpg" alt="Фото пользователя" />
       </div>
     </header>
   );
