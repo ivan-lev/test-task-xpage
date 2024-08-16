@@ -9,7 +9,7 @@
     background-color: transparent;
   }
 
-  &__articles {
+  &__content {
     display: grid;
     grid-template-columns: 2fr 1px 1fr;
     gap: 16px;
@@ -25,9 +25,12 @@
     }
   }
 
-  &__articles-block_primary {
-    width: 100%;
+  &__block {
     display: grid;
+  }
+
+  &__block_primary {
+    width: 100%;
     grid-template-rows: 611px 294px;
     gap: 20px;
 
@@ -38,8 +41,7 @@
     }
   }
 
-  &__articles-block_secondary {
-    display: grid;
+  &__block_secondary {
     grid-template-rows: 302px 1fr 302px;
 
     @media screen and (max-width: 1280px) {

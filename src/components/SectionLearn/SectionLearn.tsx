@@ -15,8 +15,8 @@ export default function SectionLearn(): JSX.Element {
           в раздел
         </a>
       </div>
-      <div className="learn__articles">
-        <div className="learn__articles-block_primary">
+      <div className="learn__content">
+        <div className="learn__block learn__block_primary">
           <div className="border-rounded learn__article-primary learn__article-primary_first">
             <h3 className="learn__article-title_primary">
               мы собрали секции для детей по всему городу
@@ -36,7 +36,7 @@ export default function SectionLearn(): JSX.Element {
 
         <div className="separator learn__articles-separator"></div>
 
-        <div className="learn__articles-block_secondary">
+        <div className="learn__block learn__block_secondary">
           {secondaryArticlesData.map((article, index) => (
             <ArticleSecondary key={index} article={article} />
           ))}
